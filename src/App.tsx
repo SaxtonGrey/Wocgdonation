@@ -1,17 +1,18 @@
-import {
-  DonationForm,
-  DonationData,
-} from "./components/DonationForm";
+import { DonationForm, DonationData } from "./components/DonationForm";
 import { Card } from "./components/ui/card";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 import { Toaster } from "./components/ui/sonner";
 
 export default function App() {
   const handleDonation = (data: DonationData) => {
     console.log("Donation submitted:", data);
     toast.success("Thank you for your donation!", {
-      description: `We've received your ${data.isMonthly ? "monthly" : "one-time"} donation of $${data.amount}. A confirmation email has been sent to ${data.email}.`,
+      description: `We've received your ${
+        data.isMonthly ? "monthly" : "one-time"
+      } donation of $${data.amount}. A confirmation email has been sent to ${
+        data.email
+      }.`,
     });
   };
 
@@ -28,9 +29,7 @@ export default function App() {
                 <img src="https://wocgive.org/wp-content/uploads/2020/10/Image-4.png"></img>
               </div>
               <div>
-                <h1 className="tracking-tight">
-                  Women of Color Give
-                </h1>
+                <h1 className="tracking-tight">Women of Color Give</h1>
                 <p className="text-muted-foreground">
                   Making a difference together
                 </p>
@@ -49,20 +48,16 @@ export default function App() {
               <div className="space-y-4">
                 <h2>Your Generosity Changes Lives</h2>
                 <p className="text-muted-foreground">
-                  Women of Color GIVE is a philanthropy circle
-                  that has pulled elements of various cultural
-                  traditions together to create a space for
-                  women of color to connect and leverage
-                  resources while supporting each other and the
-                  causes that matter to us. Women of Color are
-                  underrepresented in major philanthropic
-                  circles and as a result, women of color and
-                  the causes we care about do not benefit from
-                  networks along with the care and attention
-                  given to these networks. Women of Color GIVE
-                  is helping change the charitable giving
-                  landscape by adding more diverse voices to the
-                  philanthropy narrative.
+                  Women of Color GIVE is a philanthropy circle that has pulled
+                  elements of various cultural traditions together to create a
+                  space for women of color to connect and leverage resources
+                  while supporting each other and the causes that matter to us.
+                  Women of Color are underrepresented in major philanthropic
+                  circles and as a result, women of color and the causes we care
+                  about do not benefit from networks along with the care and
+                  attention given to these networks. Women of Color GIVE is
+                  helping change the charitable giving landscape by adding more
+                  diverse voices to the philanthropy narrative.
                 </p>
               </div>
 
@@ -86,10 +81,15 @@ export default function App() {
                     <div className="h-2 w-2 rounded-full bg-primary" />
                   </div>
                   <div>
-                    <p>
-                      100% of your donation goes directly to
-                      those in need
-                    </p>
+                    <p>100% of your donation goes directly to those in need</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <div className="h-2 w-2 rounded-full bg-primary" />
+                  </div>
+                  <div>
+                    <p>Tax-deductible receipts provided for all donations</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -98,19 +98,8 @@ export default function App() {
                   </div>
                   <div>
                     <p>
-                      Tax-deductible receipts provided for all
-                      donations
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <div className="h-2 w-2 rounded-full bg-primary" />
-                  </div>
-                  <div>
-                    <p>
-                      Secure payment processing with
-                      industry-standard encryption
+                      Secure payment processing with industry-standard
+                      encryption
                     </p>
                   </div>
                 </div>
@@ -140,12 +129,8 @@ export default function App() {
       <footer className="border-t mt-20">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-muted-foreground">
-            <p>
-              &copy; 2025 Hope Foundation. All rights reserved.
-            </p>
-            <p className="mt-2">
-              Registered 501(c)(3) Non-Profit Organization
-            </p>
+            <p>&copy; 2025 Hope Foundation. All rights reserved.</p>
+            <p className="mt-2">Registered 501(c)(3) Non-Profit Organization</p>
           </div>
         </div>
       </footer>

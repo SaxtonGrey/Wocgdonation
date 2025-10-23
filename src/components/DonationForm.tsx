@@ -33,13 +33,15 @@ export function DonationForm({ onSubmit }: DonationFormProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const finalAmount = selectedAmount === "custom" 
-      ? parseFloat(customAmount) 
-      : parseFloat(selectedAmount);
+    const finalAmount =
+      selectedAmount === "custom"
+        ? parseFloat(customAmount)
+        : parseFloat(selectedAmount);
 
     onSubmit({
       amount: finalAmount,
-      customAmount: selectedAmount === "custom" ? parseFloat(customAmount) : undefined,
+      customAmount:
+        selectedAmount === "custom" ? parseFloat(customAmount) : undefined,
       firstName,
       lastName,
       email,
@@ -56,7 +58,7 @@ export function DonationForm({ onSubmit }: DonationFormProps) {
           <Label>Select Amount</Label>
           <p className="text-muted-foreground">Choose your donation amount</p>
         </div>
-        
+
         <RadioGroup value={selectedAmount} onValueChange={setSelectedAmount}>
           <div className="grid grid-cols-3 gap-3">
             {presetAmounts.map((amount) => (
@@ -103,12 +105,11 @@ export function DonationForm({ onSubmit }: DonationFormProps) {
           <Checkbox
             id="monthly"
             checked={isMonthly}
-            onCheckedChange={(checked) => setIsMonthly(checked as boolean)}
+            onCheckedChange={(checked: boolean) =>
+              setIsMonthly(checked as boolean)
+            }
           />
-          <Label
-            htmlFor="monthly"
-            className="cursor-pointer"
-          >
+          <Label htmlFor="monthly" className="cursor-pointer">
             Make this a monthly donation
           </Label>
         </div>
@@ -162,12 +163,11 @@ export function DonationForm({ onSubmit }: DonationFormProps) {
           <Checkbox
             id="anonymous"
             checked={isAnonymous}
-            onCheckedChange={(checked) => setIsAnonymous(checked as boolean)}
+            onCheckedChange={(checked: boolean) =>
+              setIsAnonymous(checked as boolean)
+            }
           />
-          <Label
-            htmlFor="anonymous"
-            className="cursor-pointer"
-          >
+          <Label htmlFor="anonymous" className="cursor-pointer">
             Make my donation anonymous
           </Label>
         </div>
