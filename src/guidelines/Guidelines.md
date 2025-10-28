@@ -1,4 +1,5 @@
 **Add your own guidelines here**
+
 <!--
 
 System Guidelines
@@ -27,6 +28,7 @@ your design system's components, tokens, variables and components.
 For example:
 
 * Use a base font-size of 14px
+* Use globals.css for all base styling
 * Date formats should always be in the format “Jun 10”
 * The bottom toolbar should only ever have a maximum of 4 items
 * Never use the floating action button with the bottom toolbar
