@@ -21,11 +21,11 @@ export default function App() {
       <Toaster />
 
       {/* Header */}
-      <header className="border-b bg-background/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="h-20 w-20 rounded-full border-b flex items-center justify-center">
+      <header className="border-b bg-background backdrop-blur-sm sticky top-0 z-10">
+        <div className="container mx-auto px-6 py-6">
+          <div className="flex items-center ">
+            <div className="flex items-center gap-3 justify-between w-full">
+              <div className="h-40 flex items-center justify-center">
                 <img src="https://wocgive.org/wp-content/uploads/2020/10/Image-4.png"></img>
               </div>
               <div>
